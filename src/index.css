@@ -1,0 +1,256 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+#root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 0px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #eadfb4;
+  border-radius: 10px;
+}
+/* ///////////////////////////////////////////////////// */
+.logo {
+  display: block;
+  margin: 0;
+  padding: 10px;
+  width: fit-content;
+}
+form label {
+  margin-right: 10px;
+  font-size: 14px;
+}
+/* ///////////////////////////////////////// */
+.logo-container {
+  background-color: #d7e4c0;
+  padding: 0 15px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 200px;
+}
+
+.logo-container p {
+  font-weight: bold;
+  color: #114232;
+}
+.logo-container p::first-letter {
+  font-size: 20px;
+}
+.logo-container input {
+  padding: 5px;
+  border: 1px solid #114232;
+  width: 300px;
+  background-color: #eee;
+  caret-color: #114232;
+  position: relative;
+}
+
+.logo-container input:focus {
+  outline: none;
+}
+
+/* ////////////////////////////////////////// */
+.container {
+  position: relative;
+  background-color: #fff3c7;
+  height: calc(100% - 95px);
+  padding: 20px 200px;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+  padding-top: 50px;
+}
+.list {
+  width: 600px;
+  height: 570px;
+  background-color: #b0c5a4;
+  border-radius: 10px;
+}
+.list ul {
+  padding: 0;
+  overflow: scroll;
+  height: 90%;
+}
+.header {
+  font-weight: bold;
+  color: #fff3c7;
+  text-align: left;
+  margin-left: 5px;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 5px;
+}
+
+.anime-item {
+  overflow: hidden;
+  height: 100px;
+  list-style: none;
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  border-bottom: 1px solid #fff3c7;
+  font-size: 10px;
+  cursor: pointer;
+  position: relative;
+}
+.anime-item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0%;
+  height: 0%;
+  opacity: 0%;
+  background-color: #fff3c7;
+
+  transition: opacity 0.2s linear;
+}
+.anime-item:hover::before {
+  opacity: 0.3;
+  width: 100%;
+  height: 100%;
+}
+label {
+  margin-right: 10px;
+}
+.anime-item img {
+  width: 100px;
+  height: 100px;
+}
+.p-flex {
+  display: flex;
+  gap: 2px;
+  flex-direction: column;
+}
+.loading {
+  position: absolute;
+  font-weight: bold;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.target {
+  width: 400px;
+  height: 550px;
+  background-color: #b0c5a4;
+  border-radius: 10px;
+  padding: 10px;
+  position: relative;
+}
+.target p {
+  text-align: center;
+}
+.target img {
+  width: 100px;
+  height: 150px;
+  display: block;
+  margin: auto;
+}
+.target span {
+  display: block;
+}
+.target .info {
+  font-size: 14px;
+  padding: 15px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+}
+.target a {
+  text-decoration: none;
+  padding: 10px;
+  color: #fff3c7;
+}
+.target button.exit {
+  background-color: transparent;
+  position: absolute;
+  right: 10px;
+  border: none;
+  cursor: pointer;
+}
+.target button.add {
+  background-color: #fff3c7;
+  width: 300px;
+  height: 40px;
+  border: none;
+  color: black;
+  border-radius: 12px;
+  margin: 20px auto;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+.watched {
+  padding: 10px;
+  display: flex;
+  gap: 5px;
+  border-bottom: 1px solid #fff3c7;
+  position: relative;
+}
+.watched button.exit {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: transparent;
+  color: #fff3c7;
+  font-weight: bold;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+.rateInput {
+  background-color: white;
+  border: 2px solid #fff3c7;
+}
+.rateInput:focus {
+  outline: none;
+}
+.stats-parent {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+.statas {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+.statas p {
+  font-size: 10px;
+}
+.title {
+  font-weight: bold;
+  color: #fff3c7;
+  margin-bottom: 0;
+}
+.stats-info {
+  font-weight: bold;
+}
